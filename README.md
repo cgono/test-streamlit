@@ -57,6 +57,44 @@ The app will be available at `http://localhost:8501`
 
 ## Development
 
+### Code Quality Tools
+
+This project uses the following code quality tools:
+- **ruff**: Fast Python linter and code formatter
+- **mypy**: Static type checker
+- **pre-commit**: Git hooks to run checks before commits
+
+#### Setup Pre-commit Hooks
+
+Install the pre-commit hooks:
+```bash
+uv run pre-commit install
+```
+
+#### Running Code Quality Checks
+
+Run ruff linter:
+```bash
+uv run ruff check .
+```
+
+Run ruff formatter:
+```bash
+uv run ruff format .
+```
+
+Run mypy type checker:
+```bash
+uv run mypy app.py
+```
+
+Run all pre-commit hooks manually:
+```bash
+uv run pre-commit run --all-files
+```
+
+### Adding Dependencies
+
 Add new dependencies:
 ```bash
 uv add <package-name>
